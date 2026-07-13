@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACHADOXZ — Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== CURSOR GLOW ===================== -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="nav">
+  <div class="nav-left">
+    <span class="logo">MACHADO<span class="logo-accent">XZ</span></span>
+  </div>
+  <nav class="nav-center">
+    <a href="#sobre" class="nav-link snd-hover">sobre</a>
+    <a href="#frase" class="nav-link snd-hover">frase do dia</a>
+    <a href="#redes" class="nav-link snd-hover">redes</a>
+    <a href="#contato" class="nav-link snd-hover">contato</a>
+  </nav>
+  <div class="nav-right">
+    <button class="pill-btn snd-click" id="soundToggle">
+      <span id="soundIcon">🔊</span> <span id="soundLabel">som</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== TICKER (assinatura visual) ===================== -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <!-- preenchido via JS com fragmentos das frases -->
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">
+      <span class="dot"></span> DISPONÍVEL &middot; SEMPRE SUBINDO
+    </p>
+    <h1 class="hero-title reveal">
+      Não paro de<br>
+      subir. Quem tem<br>
+      medo, <em>fica pra trás.</em>
+    </h1>
+    <div class="hero-actions reveal">
+      <a href="#redes" class="btn-primary snd-click">Ver redes ↓</a>
+      <a href="#frase" class="btn-ghost snd-click">Frase do dia</a>
+    </div>
+  </div>
+
+  <div class="hero-photo reveal">
+    <div class="photo-frame">
+      <!-- ======================================================
+           📸 COLOQUE SUA FOTO AQUI 📸
+
+           1. Renomeie sua foto para:  foto.jpg
+              (pode ser .jpg, .jpeg ou .png — se usar .png,
+               troque "foto.jpg" por "foto.png" na linha abaixo)
+
+           2. Copie o arquivo para a pasta:  assets/
+              (a mesma pasta onde estão style.css e script.js)
+
+           3. Pronto. A tag <img> abaixo já está apontando
+              para assets/foto.jpg — assim que o arquivo existir
+              nesse caminho, a foto substitui este placeholder.
+         ======================================================= -->
+      <img src="assets/foto.jpg" alt="Foto de Machado" class="photo-real"
+           onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';">
+      <div class="photo-placeholder" id="photoPlaceholder">
+        <span class="ph-icon">＋</span>
+        <span class="ph-text">assets/foto.jpg</span>
+        <span class="ph-sub">coloque sua foto aqui</span>
+      </div>
+      <div class="photo-tag-row">
+        <span class="photo-tag">machadoxz</span>
+        <span class="photo-tag photo-tag--muted">2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FRASE DO DIA ===================== -->
+<section class="frase-section" id="frase">
+  <div class="frase-num">01</div>
+  <div class="frase-box">
+    <p class="frase-eyebrow">frase de hoje</p>
+    <blockquote class="frase-texto" id="fraseTexto">carregando...</blockquote>
+    <p class="frase-autor" id="fraseAutor">—</p>
+    <button class="btn-ghost snd-click" id="fraseRefresh">nova frase (aleatória) ↻</button>
+    <p class="frase-info">
+      as frases mudam por dia e não se repetem mais de 2 vezes seguidas no ciclo.
+      dia 31? tem frase especial. 😉
+    </p>
+  </div>
+</section>
+
+<!-- ===================== REDES ===================== -->
+<section class="redes" id="redes">
+  <div class="redes-num">03</div>
+  <div class="redes-content">
+    <h2 class="reveal">Redes &amp; onde me achar</h2>
+    <div class="redes-grid">
+
+      <a class="rede-card snd-hover snd-click" href="https://www.instagram.com/cfdomachadoxz?igsh=NDN4OWcydmhlYWkw" target="_blank" rel="noopener">
+        <span class="rede-icon">◎</span>
+        <span class="rede-nome">Instagram</span>
+        <span class="rede-user">@cfdomachadoxz</span>
+      </a>
+
+      <a class="rede-card snd-hover snd-click" href="https://www.instagram.com/j.lucassm_?igsh=MWxydGJ5Y3FsZTFueQ==" target="_blank" rel="noopener">
+        <span class="rede-icon">◎</span>
+        <span class="rede-nome">Instagram (pessoal)</span>
+        <span class="rede-user">@j.lucassm_</span>
+      </a>
+
+      <a class="rede-card snd-hover snd-click" href="https://www.tiktok.com/@machadoxz._?_r=1&_t=ZS-94xOBXImfjt" target="_blank" rel="noopener">
+        <span class="rede-icon">▶</span>
+        <span class="rede-nome">TikTok</span>
+        <span class="rede-user">@machadoxz._</span>
+      </a>
+
+      <a class="rede-card snd-hover snd-click" href="https://open.spotify.com/user/313oh6676f7mnf5udsrld5u2ejfa?si=SHbhAA39T9mgFY2nh49WZA&utm_source=copy-link" target="_blank" rel="noopener">
+        <span class="rede-icon">♫</span>
+        <span class="rede-nome">Spotify</span>
+        <span class="rede-user">machadoxz</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTATO / FOOTER ===================== -->
+<footer class="footer" id="contato">
+  <p class="footer-title">vencer é o que importa. o resto é a consequência.</p>
+  <p class="footer-sub">— ayrton senna</p>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> machadoxz</span>
+    <span class="footer-dot">•</span>
+    <span>feito com atitude</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
